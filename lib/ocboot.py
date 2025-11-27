@@ -54,7 +54,7 @@ KEY_K3S_API_ENDPOINT = "api_endpoint"
 KEY_K3S_API_PORT = "api_port"
 KEY_K3S_AIRGAP_DIR = "airgap_dir"
 KEY_K3S_VERSION = "k3s_version"
-VAL_K3S_VERSION = k3s.VERSION_V1_28_5_K3S_1
+VAL_K3S_VERSION = k3s.VERSION_V1_34_2_K3S_1
 KEY_K3S_TOKEN = "token"
 VAL_K3S_TOKEN = "mytoken@yunionio"
 
