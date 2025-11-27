@@ -1,4 +1,4 @@
-FROM alpine:3.17
+FROM alpine:3.22.2
 
 ENV TZ UTC
 RUN sed -i 's!https://dl-cdn.alpinelinux.org/!https://mirrors.ustc.edu.cn/!g' /etc/apk/repositories && \
@@ -32,10 +32,10 @@ RUN sed -i 's!https://dl-cdn.alpinelinux.org/!https://mirrors.ustc.edu.cn/!g' /e
     rm -rf /root/.cargo
 
 RUN mkdir -p /airgap_assets && \
-	curl -L https://github.com/k3s-io/k3s/releases/download/v1.28.5%2Bk3s1/k3s -o /airgap_assets/k3s && \
-	curl -L https://github.com/k3s-io/k3s/releases/download/v1.28.5%2Bk3s1/k3s-arm64 -o /airgap_assets/k3s-arm64 && \
-	curl -L https://github.com/k3s-io/k3s/releases/download/v1.28.5%2Bk3s1/k3s-airgap-images-amd64.tar.zst -o /airgap_assets/k3s-airgap-images-amd64.tar.zst && \
-	curl -L https://github.com/k3s-io/k3s/releases/download/v1.28.5%2Bk3s1/k3s-airgap-images-arm64.tar.zst -o /airgap_assets/k3s-airgap-images-arm64.tar.zst
+	curl -L https://github.com/k3s-io/k3s/releases/download/v1.34.2%2Bk3s1/k3s -o /airgap_assets/k3s && \
+	curl -L https://github.com/k3s-io/k3s/releases/download/v1.34.2%2Bk3s1/k3s-arm64 -o /airgap_assets/k3s-arm64 && \
+	curl -L https://github.com/k3s-io/k3s/releases/download/v1.34.2%2Bk3s1/k3s-airgap-images-amd64.tar.zst -o /airgap_assets/k3s-airgap-images-amd64.tar.zst && \
+	curl -L https://github.com/k3s-io/k3s/releases/download/v1.34.2%2Bk3s1/k3s-airgap-images-arm64.tar.zst -o /airgap_assets/k3s-airgap-images-arm64.tar.zst
 
 ENV K3S_AIRGAP_DIR /airgap_assets
 ENV PATH $PATH:/ocboot
