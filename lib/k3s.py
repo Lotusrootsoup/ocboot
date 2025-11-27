@@ -12,7 +12,7 @@ def GET_AIRGAP_DIR():
     return default_dir
 
 
-VERSION_V1_28_5_K3S_1 = "v1.28.5+k3s1"
+VERSION_V1_34_2_K3S_1 = "v1.34.2+k3s1"
 
 '''
 from:
@@ -21,11 +21,11 @@ from:
 - https://github.com/k3s-io/k3s/releases/download/v1.29.0%2Bk3s1/sha256sum-arm64.txt
 '''
 SHA256_CHECK_SUM = {
-    VERSION_V1_28_5_K3S_1: {
-        'k3s': '38fadb2baf75cb516d59f7f4a40c1950fdc0dce5ebe7251aae235527b7de4083',
-        'k3s-airgap-images-amd64.tar.zst': 'e259a812e77219f8436938d7ee871945549956defe12bd210ca206597198cd67',
-        'k3s-arm64': 'ce46081904d461175f152493814d2f2ac1d5e40992d6b2b2b819eb6532c413f9',
-        'k3s-airgap-images-arm64.tar.zst': '896a80cdfa8131efba625775c60c79a5525ef22b6d5a6c87560afed50b8a630b'
+    VERSION_V1_34_2_K3S_1: {
+        'k3s': '15811d34187e03fe29d0e46108c42cc33e62cec1b3d9d80f50944536ebcad40a',
+        'k3s-airgap-images-amd64.tar.zst': '24359781bd775f513691e98031853d79eac53e265f7d72d1e7325df4f3b18eb0',
+        'k3s-arm64': '2e1db0e54a8b0d0ab8a264a119c9c617561f9290e7bb2722d795f8bc91b24cf8',
+        'k3s-airgap-images-arm64.tar.zst': '41b34aab92bc5166135dc73217ead65766688fd3543166ce32ffff7e101bef46'
     }
 }
 
@@ -86,7 +86,7 @@ def init_airgap_assets(dest_dir, k3s_version):
     if not is_using_k3s():
         return
 
-    K3S_URL_PREFIX = os.environ.get('K3S_URL_PREFIX', 'https://github.com/k3s-io/k3s/releases/download/v1.28.5%2Bk3s1')
+    K3S_URL_PREFIX = os.environ.get('K3S_URL_PREFIX', 'https://github.com/k3s-io/k3s/releases/download/v1.34.2%2Bk3s1')
 
     if not os.path.exists(dest_dir):
         os.makedirs(dest_dir)
