@@ -17,8 +17,8 @@ VERSION_V1_34_2_K3S_1 = "v1.34.2+k3s1"
 '''
 from:
 
-- https://github.com/k3s-io/k3s/releases/download/v1.29.0%2Bk3s1/sha256sum-amd64.txt
-- https://github.com/k3s-io/k3s/releases/download/v1.29.0%2Bk3s1/sha256sum-arm64.txt
+- https://github.com/k3s-io/k3s/releases/download/v1.34.2%2Bk3s1/sha256sum-amd64.txt
+- https://github.com/k3s-io/k3s/releases/download/v1.34.2%2Bk3s1/sha256sum-arm64.txt
 '''
 SHA256_CHECK_SUM = {
     VERSION_V1_34_2_K3S_1: {
